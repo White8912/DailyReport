@@ -26,8 +26,29 @@ var findMedianSortedArrays = function (nums1, nums2) {
     return nums[Math.floor(nums.length / 2)];
   } else {
     return parseFloat(
-      (nums[Math.floor(nums.length / 2) -1] + nums[Math.floor(nums.length / 2)]) / 2
+      (nums[Math.floor(nums.length / 2) - 1] +
+        nums[Math.floor(nums.length / 2)]) /
+        2
     );
   }
 };
-console.log("+++result: ", findMedianSortedArrays([], [4]));
+
+// Regular Expression Matching
+var isMatch = function (s, p) {
+  let text = s,
+    pattern,
+    result;
+  pattern = new RegExp(p);
+  result = text.match(pattern);
+  if (!!result) {
+    if (text === result[0]) {
+      return true;
+    } else {
+      return false;
+    }
+  } else {
+    return false;
+  }
+};
+
+console.log("+++result: ", isMatch("aa", "b"));
