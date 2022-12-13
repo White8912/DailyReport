@@ -51,4 +51,46 @@ var isMatch = function (s, p) {
   }
 };
 
-console.log("+++result: ", isMatch("aa", "b"));
+// Merge k Sorted Lists
+var mergeKLists = function (lists) {
+  let outPut = [];
+  function mergeFunc(lists) {
+    lists.map((list, index) => {
+      outPut = outPut.concat(list);
+    });
+    outPut = outPut.sort((a, b) => a - b);
+    return outPut;
+  }
+  !!lists[0]
+    ? !!lists[0][0]
+      ? mergeFunc(lists)
+      : (outPut = lists)
+    : (outPut = lists);
+  return outPut;
+};
+
+// Remove Element
+var removeElement = function (nums, val) {
+  let tempArray = [],
+    count = 0;
+  nums.map((num) => {
+    if (num === val) count++;
+    else {
+      tempArray = [...tempArray, num];
+    }
+  });
+  nums = tempArray;
+  return nums.length;
+};
+
+// Move Zeroes
+var moveZeroes = function(nums) {
+  for(var i = nums.length;i--;){
+     if(nums[i]===0){
+         nums.splice(i,1)
+         nums.push(0);
+     }
+ }
+};
+
+console.log("+++result: ", removeElement([3, 2, 2, 3], 3));
