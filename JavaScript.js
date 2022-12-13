@@ -93,4 +93,16 @@ var moveZeroes = function(nums) {
  }
 };
 
+
+// Nim Game
+/**
+ * @param {number} n
+ * @return {boolean}
+ */
+ var canWinNim = function(n) {
+  if(n % 4 == 0)
+      return false
+  return true
+};
+
 console.log("+++result: ", removeElement([3, 2, 2, 3], 3));
