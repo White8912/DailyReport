@@ -15,5 +15,5 @@
 ## Apply:  
 	I applied for 4 jobs and they were mainly about Front End Engineer and Front End Developer.
 
-## React Video Course 18 : 
+## React Video Course 20 : 
 	I completed 20 courses, they were mostly deploying monster projects. "https://White8912.github.io/monsters-rolodex"
